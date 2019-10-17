@@ -1,0 +1,21 @@
+---
+title: "Train Data"
+author: "Hoda Abdalla"
+date: "10/17/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+```{r}
+ download.file("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaerGnn1tDQfgiyJRl7jnn1Au7Ev6Qt7BwMpl53ZgzAyMnANQfog9y4es4ZExlX5tjEgl0mPIyTGcP/pub?gid=480043959&single=true&output=csv", 
+               destfile = "train_data.csv", 
+               mode = "wb")
+ 
+ trains <- read_csv(file = "train_data.csv")
+```
+
+
